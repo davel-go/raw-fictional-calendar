@@ -1,0 +1,28 @@
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Entornos virtuales
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+
+# Archivos de configuración de entorno
+.env
+.env.*
+
+# Archivos de logs y bases de datos temporales
+*.log
+*.sqlite3
+*.db
+
+# Configuraciones y archivos de IDEs
+.vscode/
+.idea/
+
+# Caché de Jupyter Notebook
+.ipynb_checkp
