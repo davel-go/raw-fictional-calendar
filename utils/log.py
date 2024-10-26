@@ -16,6 +16,3 @@ def log_action(message, level='INFO', log_file='project.log'):
         f.write(log_message)
 
     print("Log actualizado:", log_message.strip())
-
-
-log_action("Testing log function")
