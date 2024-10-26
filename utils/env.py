@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from log import log_action
+from utils.log import log_action
 
 log_action("INITIALIZING ENV VARS EXTRACTION TASK ===== ===== ===== =====")
 
