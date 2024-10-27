@@ -27,8 +27,11 @@ def generate_event_facts(conn: sqlite3.Connection, events):
     for event in events:
         cursor.execute('''
                 INSERT INTO EVENT_FACTS (story_arc, character, location_1, location_2, location_3, type, description, day, month, year)
-                VALUES (?, ?, ?, ?, ?, ?)
-            ''', (event.story_arc, event.location_1, event.location_2, event.location_3, event.type, event.description, event.day, event.month, event.year))
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ''', (event.story_arc, event.character,
+                  event.location_1, event.location_2, event.location_3,
+                  event.type, event.description,
+                  event.day, event.month, event.year))
 
     conn.commit()
     return True

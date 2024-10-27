@@ -1,3 +1,4 @@
+from entity.EventFact import EventFact
 
 class EventPreload:
     def __init__(self, id, story_arc, character, location_1, location_2, location_3, type, description, day, month, year, anchor_event, before, a_day, a_month,
@@ -41,5 +42,5 @@ class EventPreload:
         return [self.day, self.month, self.year]
 
     def to_event(self):
-        # return Event(self.id, self.story_arc, self.type, self.description, self.day, self.month, self.year)
-        return True
+        return EventFact(self.id, self.story_arc, self.character, self.location_1, self.location_2, self.location_3, self.type, self.description, self.day, self.month, self.year)
+
