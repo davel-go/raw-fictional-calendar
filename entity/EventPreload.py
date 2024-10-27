@@ -4,9 +4,9 @@ class EventPreload:
                  a_year):
         self.id = id
         self.story_arc = story_arc
-        self.location_1 = location_1,
-        self.location_2 = location_2,
-        self.location_3 = location_3,
+        self.location_1 = location_1
+        self.location_2 = location_2
+        self.location_3 = location_3
         self.type = type
         self.description = description
         self.day = day
