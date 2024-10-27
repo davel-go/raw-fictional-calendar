@@ -1,7 +1,7 @@
 import sqlite3
 
 
-def create_and_fill_event_fact_table(conn: sqlite3.Connection, events):
+def generate_event_facts(conn: sqlite3.Connection, events):
     cursor = conn.cursor()
     # Delete EVENT_FACTS table content
     cursor.execute('DROP TABLE IF EXISTS EVENT_FACTS')
