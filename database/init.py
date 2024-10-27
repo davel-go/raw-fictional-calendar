@@ -7,7 +7,11 @@ def initialize_events_table(conn: sqlite3.Connection):
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS EVENTS (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        story_arc TEXT NOT NULL,
+        story_arc TEXT,
+        character TEXT,
+        location_1 TEXT,
+        location_2 TEXT,
+        location_3 TEXT,
         type TEXT NOT NULL,
         desc TEXT,
         day INTEGER,
