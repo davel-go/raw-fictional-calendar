@@ -1,9 +1,10 @@
 
 class EventPreload:
-    def __init__(self, id, story_arc, location_1, location_2, location_3, type, description, day, month, year, anchor_event, before, a_day, a_month,
+    def __init__(self, id, story_arc, character, location_1, location_2, location_3, type, description, day, month, year, anchor_event, before, a_day, a_month,
                  a_year):
         self.id = id
         self.story_arc = story_arc
+        self.character = character
         self.location_1 = location_1
         self.location_2 = location_2
         self.location_3 = location_3
@@ -17,7 +18,7 @@ class EventPreload:
         self.a_day = a_day
         self.a_month = a_month
         self.a_year = a_year
-        self.is_event = self.anchor_event is None
+        self.is_event = self.anchor_event is None or self.anchor_event is ''
 
     def get_str_location(self):
         return f"{self.location_1} > {self.location_2} > {self.location_3}"
@@ -25,6 +26,7 @@ class EventPreload:
     def __str__(self):
         return (f"ID: {self.id}\n"
                 f"Story arc: {self.story_arc}\n"
+                f"Character: {self.character}\n"
                 f"Event location: {self.get_str_location()}\n"
                 f"Description: {self.description}\n"
                 f"Date: {self.day}-{self.month}-{self.year}\n"
