@@ -4,7 +4,7 @@ def main():
     # Configura el parser de argumentos
     parser = argparse.ArgumentParser(
         prog="fcalendar",
-        description="fcalendar: Console application for this fictional calendar manager"
+        description="fcalendar: CLI to manage fictional calendar data"
     )
 
     # Mensaje de ayuda personalizado para --help
