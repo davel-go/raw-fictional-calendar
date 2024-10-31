@@ -20,6 +20,8 @@ if not os.path.exists(WORK_DIR):
 
 log_action(f"   Database Name: {DB_NAME} ")
 log_action(f"   Working Directory: {WORK_DIR} ")
+log_action(f"   DAYS_PER_MONTH: {DAYS_PER_MONTH} ")
+log_action(f"   MONTHS_PER_YEAR: {MONTHS_PER_YEAR} ")
 
 print("Database name: ", DB_NAME)
 print("Work dir: ", WORK_DIR)
