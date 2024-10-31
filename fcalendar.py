@@ -28,8 +28,6 @@ def main():
         else:
             print("Event information: \n ===", event_info, "\n===")
 
-    print("Welcome to fcalendar. Use '--help' to see the available options.")
-
 
 if __name__ == "__main__":
     main()
