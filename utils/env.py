@@ -11,6 +11,8 @@ load_dotenv(ENV_PATH)
 
 DB_NAME = os.getenv('DB_NAME', 'test')
 WORK_DIR = os.getenv('WORKING_DIR', '/')
+DAYS_PER_MONTH = os.getenv('DAYS_PER_MONTH', 115)
+MONTHS_PER_YEAR = os.getenv('MONTHS_PER_YEAR', 6)
 
 if not os.path.exists(WORK_DIR):
     WORK_DIR = os.path.abspath(os.sep)
@@ -19,5 +21,7 @@ if not os.path.exists(WORK_DIR):
 log_action(f"   Database Name: {DB_NAME} ")
 log_action(f"   Working Directory: {WORK_DIR} ")
 
-print("Database Name: ", DB_NAME)
-print("Work Dir: ", WORK_DIR)
+print("Database name: ", DB_NAME)
+print("Work dir: ", WORK_DIR)
+print("Days per mont: ", DAYS_PER_MONTH)
+print("Months per year: ", MONTHS_PER_YEAR)
