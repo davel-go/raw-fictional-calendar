@@ -1,8 +1,9 @@
+from utils.env import DAYS_PER_MONTH, MONTHS_PER_YEAR
+
+
 def days_to_add(current_day, days_addition):
     if days_addition is None or days_addition == 0:
         return [current_day, 0]
-    # Total days in a month for the fictional calendar
-    days_in_month = 115
 
     # Calculate the new day by adding or subtracting days
     new_day = current_day + days_addition
@@ -10,12 +11,12 @@ def days_to_add(current_day, days_addition):
     # Determine the number of months to add or subtract
     months_to_change = 0
 
-    while new_day > days_in_month:
-        new_day -= days_in_month
+    while new_day > DAYS_PER_MONTH:
+        new_day -= DAYS_PER_MONTH
         months_to_change += 1
 
     while new_day < 1:
-        new_day += days_in_month
+        new_day += DAYS_PER_MONTH
         months_to_change -= 1
 
     return [new_day, months_to_change]
@@ -24,8 +25,6 @@ def days_to_add(current_day, days_addition):
 def months_to_add(current_month, months_addition):
     if months_addition is None or months_addition == 0:
         return [current_month, 0]
-    # Total months in a year for the fictional calendar
-    months_in_year = 6
 
     # Calculate the new month by adding or subtracting months
     new_month = current_month + months_addition
@@ -33,12 +32,12 @@ def months_to_add(current_month, months_addition):
     # Determine the number of years to add or subtract
     years_to_change = 0
 
-    while new_month > months_in_year:
-        new_month -= months_in_year
+    while new_month > MONTHS_PER_YEAR:
+        new_month -= MONTHS_PER_YEAR
         years_to_change += 1
 
     while new_month < 1:
-        new_month += months_in_year
+        new_month += MONTHS_PER_YEAR
         years_to_change -= 1
 
     result = [new_month, years_to_change]
