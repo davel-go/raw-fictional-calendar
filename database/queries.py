@@ -16,7 +16,7 @@ def get_events_as_kvm(conn : sqlite3.Connection):
     return kvm
 
 
-def get_event(conn : sqlite3.Connection, id: int):
+def db_get_event(conn : sqlite3.Connection, id: int):
     cursor = conn.cursor()
     query = f"SELECT * FROM events WHERE id = {id}"
     data = cursor.execute(query)
